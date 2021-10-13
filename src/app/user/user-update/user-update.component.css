@@ -1,0 +1,46 @@
+.player-add-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 7vh;
+    background-color: #1e272e;
+    color: #f1f2f6;
+  }
+    
+  .player-add-title span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .player-add-container {
+    margin-top: 3vh;
+  }
+  
+  
+  :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  button {
+    background-color: #1e272e;
+    color: #f1f2f6;
+    float: right;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #f1f2f6;
+    color: #1e272e;
+  }
+  
+  .file-upload-container {
+    display: flex;
+  }
+  
+  ul, li {  
+    margin: 0;  
+    padding: 0;  
+    list-style: none;  
+  }

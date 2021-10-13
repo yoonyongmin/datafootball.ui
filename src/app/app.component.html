@@ -1,0 +1,45 @@
+<!-- <div class="title-container">
+    <img src="assets/images/logo.png" />
+</div> -->
+<div class="header-container">
+  <div class="toggle-container">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>reorder</mat-icon>
+    </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/mvp">
+          <mat-icon>recommend</mat-icon>
+          <span>MOM</span>
+        </button>
+
+        <button mat-menu-item routerLink="/board">
+          <mat-icon>add_chart</mat-icon>
+          <span>Match</span>
+        </button>
+
+        <button mat-menu-item routerLink="/team">
+          <mat-icon>person_add_alt</mat-icon>
+          <span>Team</span>
+        </button>
+        
+        <button mat-menu-item routerLink="/stat">
+          <mat-icon>poll</mat-icon>
+          <span>Stat</span>
+        </button>
+
+        <button mat-menu-item routerLink="/chat">
+          <mat-icon>chat</mat-icon>
+          <span>Chat</span>
+        </button>
+      </mat-menu>
+  </div>
+
+</div>
+<!-- <div class="tab-container">
+    <div class="tab-box" routerLink="/mvp">Mvp</div>
+    <div class="tab-box" routerLink="/board">Board</div>
+    <div class="tab-box" routerLink="/team">Team</div>
+    <div class="tab-box" routerLink="/stat">Stat</div>
+</div> -->
+
+<router-outlet></router-outlet>

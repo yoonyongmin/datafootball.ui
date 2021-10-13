@@ -1,0 +1,16 @@
+.tabContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tabBox {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	cursor: pointer;
+	font-size: x-large;
+	font-weight: bo;
+	color: white;
+	background-color: cadetblue;
+}

@@ -1,0 +1,77 @@
+<div class="mvp-title">
+    <span>M O M</span>
+</div>
+
+<div class="mvp-container">
+  <mat-card class="example-card mvps">
+      <mat-card-header>
+        <mat-card-title *ngFor="let fws of fws">{{fws.name}}</mat-card-title>
+        <mat-card-subtitle>이 달의 공격수</mat-card-subtitle>
+      </mat-card-header>
+      <div class="profile-img" *ngFor="let fws of fws">
+          <img mat-card-image src="/assets/images/{{fws.uploadFile.filename}}">
+      </div>
+      <mat-card-content style="display: flex; justify-content: center;">
+        <table>
+            <th>득점</th>
+            <th>슈팅</th>
+            <tr>
+              <td *ngFor="let fws of fws">
+                  {{fws.stat.goal}}
+              </td>
+              <td *ngFor="let fws of fws">
+                  {{fws.stat.shoot}}
+              </td>
+            </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card mvps">
+      <mat-card-header>
+        <mat-card-title *ngFor="let mfs of mfs">{{mfs.name}}</mat-card-title>
+        <mat-card-subtitle>이 달의 미드필더</mat-card-subtitle>
+      </mat-card-header>
+      <div class="profile-img" *ngFor="let mfs of mfs">
+          <img mat-card-image src="/assets/images/{{mfs.uploadFile.filename}}">
+      </div>
+      <mat-card-content style="display: flex; justify-content: center;">
+        <table>
+            <th>도움</th>
+            <th>패스</th>
+            <tr>
+              <td *ngFor="let mfs of mfs">
+                  {{mfs.stat.assist}}
+              </td>
+              <td *ngFor="let mfs of mfs">
+                  {{mfs.stat.pass}}
+              </td>
+            </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card mvps mvps-bottom">
+      <mat-card-header>
+        <mat-card-title *ngFor="let dfs of dfs">{{dfs.name}}</mat-card-title>
+        <mat-card-subtitle>이 달의 수비수</mat-card-subtitle>
+      </mat-card-header>
+      <div class="profile-img" *ngFor="let dfs of dfs">
+          <img mat-card-image src="/assets/images/{{dfs.uploadFile.filename}}">
+      </div>
+      <mat-card-content style="display: flex; justify-content: center;">
+        <table>
+            <th>태클</th>
+            <th>차단</th>
+            <tr>
+              <td *ngFor="let dfs of dfs">
+                  {{dfs.stat.tackle}}
+              </td>
+              <td *ngFor="let dfs of dfs">
+                  {{dfs.stat.intercept}}
+              </td>
+            </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,15 @@
+<div class="board-title">
+    <span>M A T C H</span>
+</div>    
+
+<div class="soccer-container">
+    <div class="soccer-field">
+        <img src="https://media.istockphoto.com/vectors/soccer-field-football-field-in-top-view-football-ground-for-soccer-vector-id1215942407?k=6&m=1215942407&s=170667a&w=0&h=hF0nuAcbhxh4R0epiKBIbVOt08h-1X9jDVrDO_M7Tho=">
+    </div>
+</div>
+
+<div class="user-container">
+    <div *ngFor="let users of users" class="user" routerLink="/stat-editing/{{users.id}}">
+        {{users.name}}
+    </div>
+</div>

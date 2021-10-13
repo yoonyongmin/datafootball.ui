@@ -1,0 +1,36 @@
+<div class="table-container">
+    <table mat-table [dataSource]="users" class="mat-elevation-z8">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+        
+      <ng-container matColumnDef="backNumber">
+        <th mat-header-cell *matHeaderCellDef>No</th>
+        <td mat-cell *matCellDef="let users" routerLink="/user-detail/{{users.id}}"> {{users.backNumber}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>이름</th>
+        <td mat-cell *matCellDef="let users" routerLink="/user-detail/{{users.id}}" style="width: 25%;"> {{users.name}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>포지션</th>
+        <td mat-cell *matCellDef="let users" routerLink="/user-detail/{{users.id}}" style="width: 25%;"> {{users.position.name}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="foot">
+        <th mat-header-cell *matHeaderCellDef>주발</th>
+        <td mat-cell *matCellDef="let users" routerLink="/user-detail/{{users.id}}" style="width: 25%;"> {{users.foot.name}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  
+<div class="player-add-button" routerLink="/user-editing">
+    <button mat-mini-fab aria-label="Example icon button with a plus one icon" class="plus-add-button-background">
+        <span>+</span>
+    </button>
+</div>

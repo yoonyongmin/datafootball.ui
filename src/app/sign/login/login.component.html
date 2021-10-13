@@ -1,0 +1,59 @@
+<div class="login-container">
+    <div class="form-container">
+        <mat-form-field appearance="fill" class="form-box">
+            <mat-label>이메일을 입력하세요</mat-label>
+            <input matInput placeholder="oknym@naver.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <!-- <mat-form-field appearance="fill" class="form-box">
+            <mat-label>아이디를 입력하세요</mat-label>
+            <input matInput placeholder="oknym" [formControl]="id" required>
+            <mat-error *ngIf="id.invalid">{{getIdErrorMessage()}}</mat-error>
+        </mat-form-field> -->
+
+        <mat-form-field appearance="fill" class="form-box">
+            <mat-label>비밀번호를 입력하세요</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <div class="sign-button-container">
+            <button class="signIn-button sign-button">로그인</button>
+            <button class="signUp-button sign-button">회원가입</button>
+        </div>
+
+        <div class="option-container">
+            <div class="check-box">
+                <input type="checkbox" value="아이디 저장">
+                <span>아이디 저장</span>
+            </div>
+
+            <div class="find-box">
+                <span>ID/PW 찾기</span>
+            </div>
+        </div>
+
+        <div class="other-login-container">
+            <div class="other-login-box facebook">
+                <img src="/assets/images/facebookLogin.png">
+                <span>페이스북 아이디로 로그인</span>
+            </div>
+            <div class="other-login-box google" (click)="googleLogin()">
+                <img src="/assets/images/googleLogin.png">
+                <span>구글 아이디로 로그인</span>
+            </div>
+            <div class="other-login-box kakao">
+                <img src="/assets/images/kakaoLogin.png">
+                <span>카카오 아이디로 로그인</span>
+            </div>
+            <div class="other-login-box naver">
+                <img src="/assets/images/naverLogin.png">
+                <span>네이버 아이디로 로그인</span>
+            </div>
+        </div>
+    </div>
+  </div>

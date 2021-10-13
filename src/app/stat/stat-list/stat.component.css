@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #1e272e;
+    color: #f1f2f6;
+    cursor: pointer;
+}
+
+td {
+}
+
+.paging-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3vh;
+}
+
+.prev-button {
+	cursor: pointer;
+}
+
+.next-button {
+	cursor: pointer;
+}
+
+.search-container {
+	display: flex;
+    justify-content: center;
+	height: 4.5vh;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+
+.search-container button {
+	border: 0;
+	background-color: #1e272e;
+	color: #f1f2f6;
+}

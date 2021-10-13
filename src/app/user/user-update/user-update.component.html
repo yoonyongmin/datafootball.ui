@@ -1,0 +1,68 @@
+<div class="player-add-title">
+    <span>선수 수정</span>
+  </div>
+  
+  <div class="player-add-container">
+  
+    <div class="player-add-box">
+      <mat-form-field appearance="fill" style="width: 80%; margin-left: 10%;">
+          <mat-label>이름</mat-label>
+          <input matInput [(ngModel)]="user.name">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" style="width: 80%; margin-left: 10%;">
+          <mat-label>신장</mat-label>
+          <input matInput [(ngModel)]="user.height">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" style="width: 80%; margin-left: 10%;">
+          <mat-label>체중</mat-label>
+          <input matInput [(ngModel)]="user.weight">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" style="width: 80%; margin-left: 10%;">
+          <mat-label>등번호</mat-label>
+          <input matInput [(ngModel)]="user.backNumber">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" style="width: 80%; margin-left: 10%;">
+          <mat-label>주발</mat-label>
+          <mat-select [(ngModel)]="user.foot.id">
+            <mat-option [value]="foots.id" *ngFor="let foots of foots">
+                {{foots.name}}
+              </mat-option>
+          </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" style="width: 80%; margin-left: 10%;">
+          <mat-label>포지션</mat-label>
+          <mat-select [(ngModel)]="user.position.id">
+            <mat-option [value]="positions.id" *ngFor="let positions of positions">
+                {{positions.name}}
+              </mat-option>
+          </mat-select>
+      </mat-form-field>
+  
+      <!-- <div class="file-upload-container" style="text-align:center;">
+        <mat-card style="width: 70%; margin-left: 10%; margin-top:2vh; margin-bottom: 2vh;">  
+            <mat-card-content>  
+                <ul>  
+                    <li *ngFor="let file of files">  
+                        <mat-progress-bar [value]="file.progress"></mat-progress-bar>  
+                        <span id="file-label">  
+                        </span>  
+                    </li>  
+                </ul>  
+            </mat-card-content>  
+
+            <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" (change)="onChange($event)"/>
+          </mat-card>
+      </div> -->
+
+    </div>
+  
+    <div>
+      <button mat-button (click)="userUpdate()">수정</button>
+    </div>
+  
+  </div>

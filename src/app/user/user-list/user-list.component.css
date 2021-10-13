@@ -1,0 +1,41 @@
+span {
+    font-size: x-large;
+}
+
+.table-container {
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #1e272e;
+    color: #f1f2f6;
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+.player-add-button {
+    float: right;
+    margin: 10px;
+}
+
+.player-add-button button {
+    background-color: #1e272e;
+    margin-bottom: 1.5vh;
+}
+
+.player-add-button button span {
+    color: #f1f2f6;
+}
+
+.user-list-container {
+    margin: 10px;
+}
+
+.user-list {
+    font-size: large;
+}

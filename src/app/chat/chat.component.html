@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <input type="text" [(ngModel)]="roomId" (keyup)="roomSet()">
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="ownerId" (keyup)="roomSet()">
+    </div>
+
+    <br>
+    <br>
+    <br>
+    
+    <input type="text" [(ngModel)]="sendValue" (keydown.enter)="sendChat()">
+
+    <ng-container *ngFor="let viewContent of contents">
+        <div>
+            <span>{{viewContent.content}}</span>
+        </div>
+    </ng-container>
+</div>
